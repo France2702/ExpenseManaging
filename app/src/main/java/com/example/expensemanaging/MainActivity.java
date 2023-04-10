@@ -1,76 +1,174 @@
 package com.example.expensemanaging;
 
-import android.os.Bundle;
-
-import com.google.android.material.snackbar.Snackbar;
-
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
+import android.os.Bundle;
+import android.text.Html;
 import android.view.View;
-
-import androidx.navigation.NavController;
-import androidx.navigation.Navigation;
-import androidx.navigation.ui.AppBarConfiguration;
-import androidx.navigation.ui.NavigationUI;
-
-import com.example.expensemanaging.databinding.ActivityMainBinding;
-
-import android.view.Menu;
-import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
-    private ActivityMainBinding binding;
+    ViewPager mSLideViewPager;
+    LinearLayout mDotLayout;
+    Button backbtn, nextbtn, skipbtn;
+
+    ImageView ellipse2, ellipse1;
+
+    TextView[] dots;
+    ViewPagerAdapter viewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
+        backbtn = findViewById(R.id.backbtn);
+        nextbtn = findViewById(R.id.nextbtn);
+        skipbtn = findViewById(R.id.skipButton);
+        ellipse2 = findViewById(R.id.ellipse2);
+        ellipse1 = findViewById(R.id.ellipse1);
 
-        setSupportActionBar(binding.toolbar);
-
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-
-        binding.fab.setOnClickListener(new View.OnClickListener() {
+        backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+            public void onClick(View v) {
+
+                if (getitem(0) > 0){
+
+                    mSLideViewPager.setCurrentItem(getitem(-1),true);
+
+                }
+
             }
         });
+
+        nextbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (getitem(0) < 3)
+                    mSLideViewPager.setCurrentItem(getitem(1),true);
+                else {
+
+                    Intent i = new Intent(MainActivity.this,mainscreen.class);
+                    startActivity(i);
+                    finish();
+
+                }
+
+            }
+        });
+
+        skipbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent i = new Intent(MainActivity.this,mainscreen.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
+
+        ellipse1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent i = new Intent(MainActivity.this,mainscreen.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
+
+        ellipse2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Intent i = new Intent(MainActivity.this,mainscreen.class);
+                startActivity(i);
+                finish();
+
+            }
+        });
+
+        mSLideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
+        mDotLayout = (LinearLayout) findViewById(R.id.indicator_layout);
+
+        viewPagerAdapter = new ViewPagerAdapter(this);
+
+        mSLideViewPager.setAdapter(viewPagerAdapter);
+
+        setUpindicator(0);
+        mSLideViewPager.addOnPageChangeListener(viewListener);
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
+    public void setUpindicator(int position){
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
+        dots = new TextView[4];
+        mDotLayout.removeAllViews();
 
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        for (int i = 0 ; i < dots.length ; i++){
+
+            dots[i] = new TextView(this);
+            dots[i].setText(Html.fromHtml("&#8226"));
+            dots[i].setTextSize(35);
+            dots[i].setTextColor(getResources().getColor(R.color.inactive,getApplicationContext().getTheme()));
+            mDotLayout.addView(dots[i]);
+
         }
 
-        return super.onOptionsItemSelected(item);
+        dots[position].setTextColor(getResources().getColor(R.color.active,getApplicationContext().getTheme()));
+
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
+    ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
+        @Override
+        public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+        }
+
+        @Override
+        public void onPageSelected(int position) {
+
+            setUpindicator(position);
+
+            if (position > 0 && position <= 2) {
+
+                backbtn.setVisibility(View.VISIBLE);
+            }else if(position > 2){
+                backbtn.setVisibility(View.INVISIBLE);
+                ellipse2.setVisibility(View.INVISIBLE);
+                nextbtn.setVisibility(View.INVISIBLE);
+                ellipse1.setVisibility(View.INVISIBLE);
+            }else {
+
+                backbtn.setVisibility(View.INVISIBLE);
+
+            }
+
+        }
+
+        @Override
+        public void onPageScrollStateChanged(int state) {
+
+        }
+    };
+
+    private int getitem(int i){
+
+        return mSLideViewPager.getCurrentItem() + i;
     }
+
 }
