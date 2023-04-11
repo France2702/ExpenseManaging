@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     ViewPager mSLideViewPager;
     LinearLayout mDotLayout;
-    Button backbtn, nextbtn, skipbtn;
+    Button backbtn, nextbtn;
 
     ImageView ellipse2, ellipse1;
 
@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
         backbtn = findViewById(R.id.backbtn);
         nextbtn = findViewById(R.id.nextbtn);
-        skipbtn = findViewById(R.id.skipButton);
         ellipse2 = findViewById(R.id.ellipse2);
         ellipse1 = findViewById(R.id.ellipse1);
 
@@ -65,19 +64,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-        skipbtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-
-                Intent i = new Intent(MainActivity.this,mainscreen.class);
-                startActivity(i);
-                finish();
-
-            }
-        });
-
+        
         ellipse1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -144,14 +131,9 @@ public class MainActivity extends AppCompatActivity {
 
             setUpindicator(position);
 
-            if (position > 0 && position <= 2) {
+            if (position > 0) {
 
                 backbtn.setVisibility(View.VISIBLE);
-            }else if(position > 2){
-                backbtn.setVisibility(View.INVISIBLE);
-                ellipse2.setVisibility(View.INVISIBLE);
-                nextbtn.setVisibility(View.INVISIBLE);
-                ellipse1.setVisibility(View.INVISIBLE);
             }else {
 
                 backbtn.setVisibility(View.INVISIBLE);
