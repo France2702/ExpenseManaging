@@ -26,4 +26,15 @@
     <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="TODO">TODO</string>
+
+    <string-array name="expense_option">
+        <item>Đồ ăn</item>
+        <item>Tiền điện</item>
+        <item>Cước</item>
+        <item>Tiền nước</item>
+        <item>Nợ</item>
+        <item>Lặt vặt</item>
+        <item>Khấu hao</item>
+        <item>Thêm</item>
+    </string-array>
 </resources>

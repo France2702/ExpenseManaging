@@ -188,17 +188,18 @@
                 android:layout_weight="2" />
 
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_add_transaction"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:clickable="true"
+                android:contentDescription="@string/TODO"
                 android:focusable="true"
                 android:tint="@android:color/white"
                 app:backgroundTint="#43A047"
                 app:elevation="2dp"
                 app:fabSize="mini"
                 app:rippleColor="@android:color/white"
-                app:srcCompat="@drawable/ic_add"
-                android:contentDescription="@string/TODO" />
+                app:srcCompat="@drawable/ic_add" />
 
             <View
                 android:layout_width="0dp"

@@ -39,14 +39,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColorHint="@color/grey_40">
-
-                <androidx.appcompat.widget.AppCompatEditText
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="Chọn nhóm"
-                    android:textColor="@android:color/white"
-                    android:theme="@style/EditText.Yellow" />
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
 
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="197dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Chọn nhóm"
+                        android:textColor="@android:color/white"
+                        android:theme="@style/EditText.Yellow" />
+
+                    <View
+                        android:id="@+id/view12"
+                        android:layout_width="63dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1" />
+
+                    <Spinner
+                        android:id="@+id/expense_spinner"
+                        android:layout_width="217dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1" />
+
+                </LinearLayout>
             </com.google.android.material.textfield.TextInputLayout>
 
             <View
@@ -60,7 +77,7 @@
                 android:padding="@dimen/spacing_large"
                 android:textColorHint="@color/grey_40">
 
-                <androidx.appcompat.widget.AppCompatEditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@android:color/transparent"
@@ -144,7 +161,9 @@
                         android:layout_width="match_parent"
                         android:layout_height="46dp"
                         android:layout_weight="1"
-                        android:text="Chọn ngày" />
+                        android:background="@drawable/btn_rounded_accent"
+                        android:text="Chọn ngày"
+                        android:theme="@style/DatePickerThemeLight" />
                 </LinearLayout>
 
                 <View
@@ -166,12 +185,13 @@
 
                 <Button
                     android:id="@+id/button4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
                     android:layout_marginStart="280dp"
                     android:layout_marginTop="10dp"
-                    android:layout_height="45dp"
                     android:layout_weight="1"
-                    android:text="NHẬP" />
+                    android:backgroundTint="#3A8546"
+                    android:text="Lưu" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
