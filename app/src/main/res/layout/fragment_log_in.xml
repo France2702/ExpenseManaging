@@ -33,7 +33,6 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
         android:contentDescription="Background"
         android:src="@drawable/log_in_top_background1"
         app:layout_constraintEnd_toEndOf="parent"
