@@ -14,7 +14,7 @@
         <activity
             android:name=".AddActive"
             android:exported="false" />
-        <activity android:name=".mainscreen" />
+        <activity android:name=".MainscreenActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

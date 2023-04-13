@@ -1,5 +1,5 @@
 package com.example.expensemanaging;
 
-public class LogIn {
+public class LogInActivity {
 
 }

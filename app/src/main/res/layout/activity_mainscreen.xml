@@ -174,7 +174,7 @@
                 android:contentDescription="@string/TODO"
                 android:focusable="true"
                 android:padding="@dimen/spacing_smlarge"
-                app:srcCompat="@drawable/home"
+                app:srcCompat="@drawable/mainscreen_btn_home"
                 app:tint="#43A047" />
 
             <View
@@ -199,7 +199,7 @@
                 app:elevation="2dp"
                 app:fabSize="mini"
                 app:rippleColor="@android:color/white"
-                app:srcCompat="@drawable/ic_add" />
+                app:srcCompat="@drawable/mainscreen_ic_add_transaction" />
 
             <View
                 android:layout_width="0dp"
@@ -220,7 +220,7 @@
                 android:contentDescription="@string/TODO"
                 android:focusable="true"
                 android:padding="@dimen/spacing_smlarge"
-                app:srcCompat="@drawable/report"
+                app:srcCompat="@drawable/mainscreen_report"
                 app:tint="#43A047" />
 
             <View

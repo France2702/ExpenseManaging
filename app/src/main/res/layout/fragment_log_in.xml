@@ -12,9 +12,10 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
+        android:autofillHints=""
         android:background="@drawable/edittext_background"
         android:drawableStart="@drawable/password"
         android:drawablePadding="16dp"
@@ -26,8 +27,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-        tools:ignore="HardcodedText,VisualLintTextFieldSize"
-        android:autofillHints="" />
+        tools:ignore="HardcodedText,VisualLintTextFieldSize" />
 
     <ImageView
         android:id="@+id/imageView"
@@ -35,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:contentDescription="Background"
-        android:src="@drawable/top_background1"
+        android:src="@drawable/log_in_top_background1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,9 +80,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
-        android:src="@drawable/btn_arraw1"
+        android:src="@drawable/log_in_btn_login"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword"
         tools:ignore="MissingConstraints" />
 
 

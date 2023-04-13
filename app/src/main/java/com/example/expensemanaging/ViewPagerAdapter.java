@@ -17,10 +17,10 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     int images[] = {
 
-            R.drawable.image1,
-            R.drawable.image2,
-            R.drawable.image3,
-            R.drawable.image4
+            R.drawable.viewpageradapter_image1,
+            R.drawable.viewpageradapter_image2,
+            R.drawable.viewpageradapter_image3,
+            R.drawable.viewpageradapter_image4
 
     };
 
@@ -61,7 +61,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
         LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.slider_layout,container,false);
+        View view = layoutInflater.inflate(R.layout.activity_slider_layout,container,false);
 
         ImageView slidetitleimage = (ImageView) view.findViewById(R.id.titleImage);
         TextView slideHeading = (TextView) view.findViewById(R.id.texttitle);

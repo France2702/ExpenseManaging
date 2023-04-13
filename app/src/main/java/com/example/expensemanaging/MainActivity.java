@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
                     mSLideViewPager.setCurrentItem(getitem(1),true);
                 else {
 
-                    Intent i = new Intent(MainActivity.this,mainscreen.class);
+                    Intent i = new Intent(MainActivity.this, MainscreenActivity.class);
                     startActivity(i);
                     finish();
 
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent i = new Intent(MainActivity.this,mainscreen.class);
+                Intent i = new Intent(MainActivity.this, MainscreenActivity.class);
                 startActivity(i);
                 finish();
 
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                Intent i = new Intent(MainActivity.this,mainscreen.class);
+                Intent i = new Intent(MainActivity.this, MainscreenActivity.class);
                 startActivity(i);
                 finish();
 
