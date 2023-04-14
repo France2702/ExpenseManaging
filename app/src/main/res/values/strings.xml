@@ -40,4 +40,5 @@
         <item>Khấu hao</item>
         <item>Thêm</item>
     </string-array>
+    <string name="title_activity_phap_is_testing">Phap_is_testing</string>
 </resources>

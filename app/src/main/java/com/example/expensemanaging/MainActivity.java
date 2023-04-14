@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     ViewPager mSLideViewPager;
     LinearLayout mDotLayout;
-    Button backbtn, nextbtn;
+    Button backbtn, nextbtn, btn_add_user;
 
     ImageView ellipse2, ellipse1;
 
@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         nextbtn = findViewById(R.id.nextbtn);
         ellipse2 = findViewById(R.id.ellipse2);
         ellipse1 = findViewById(R.id.ellipse1);
+        btn_add_user = findViewById(R.id.btn_add_user);
 
         backbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +90,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_add_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switchActivities();
+            }
+        });
+
         mSLideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
         mDotLayout = (LinearLayout) findViewById(R.id.indicator_layout);
 
@@ -99,6 +107,11 @@ public class MainActivity extends AppCompatActivity {
         setUpindicator(0);
         mSLideViewPager.addOnPageChangeListener(viewListener);
 
+    }
+
+    private void switchActivities() {
+        Intent switchActivityIntent = new Intent(this, LogInActivity.class);
+        startActivity(switchActivityIntent);
     }
 
     public void setUpindicator(int position){

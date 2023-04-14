@@ -165,7 +165,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/menu_nav_1"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"
@@ -211,7 +211,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
 
-            <ImageView
+            <ImageButton
                 android:id="@+id/menu_nav_5"
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="?attr/actionBarSize"

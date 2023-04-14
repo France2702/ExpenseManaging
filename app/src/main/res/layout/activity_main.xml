@@ -55,7 +55,7 @@
         app:layout_constraintEnd_toEndOf="@+id/ellipse2" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btn_add_user"
         android:layout_width="350dp"
         android:layout_height="60dp"
         android:text="Tạo người dùng"
