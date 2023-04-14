@@ -17,11 +17,14 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     int images[] = {
 
-            R.drawable.viewpageradapter_image1,
-            R.drawable.viewpageradapter_image2,
-            R.drawable.viewpageradapter_image3,
-            R.drawable.viewpageradapter_image4
-
+//            R.drawable.viewpageradapter_image1,
+//            R.drawable.viewpageradapter_image2,
+//            R.drawable.viewpageradapter_image3,
+//            R.drawable.viewpageradapter_image4
+            R.drawable.slider1,
+            R.drawable.slider2,
+            R.drawable.slider3,
+            R.drawable.slider4,
     };
 
     int headings[] = {
