@@ -53,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (getitem(0) < 3)
+                if (getitem(0) < 4)
                     mSLideViewPager.setCurrentItem(getitem(1),true);
                 else {
 
@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setUpindicator(int position){
 
-        dots = new TextView[4];
+        dots = new TextView[5];
         mDotLayout.removeAllViews();
 
         for (int i = 0 ; i < dots.length ; i++){
@@ -145,12 +145,18 @@ public class MainActivity extends AppCompatActivity {
             setUpindicator(position);
 
             if (position > 0) {
-
                 backbtn.setVisibility(View.VISIBLE);
-            }else {
-
+                ellipse1.setVisibility(View.VISIBLE);
+            } else {
                 backbtn.setVisibility(View.INVISIBLE);
-
+                ellipse1.setVisibility(View.INVISIBLE);
+            }
+            if(position == 4){
+                nextbtn.setVisibility(View.INVISIBLE);
+                ellipse2.setVisibility(View.INVISIBLE);
+            }else{
+                nextbtn.setVisibility(View.VISIBLE);
+                ellipse2.setVisibility(View.VISIBLE);
             }
 
         }

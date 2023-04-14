@@ -25,6 +25,7 @@ public class ViewPagerAdapter extends PagerAdapter {
             R.drawable.slider2,
             R.drawable.slider3,
             R.drawable.slider4,
+            R.drawable.slider5,
     };
 
     int headings[] = {
@@ -32,7 +33,8 @@ public class ViewPagerAdapter extends PagerAdapter {
             R.string.heading_one,
             R.string.heading_two,
             R.string.heading_three,
-            R.string.heading_fourth
+            R.string.heading_fourth,
+            R.string.heading_one,
     };
 
     int description[] = {
@@ -40,7 +42,8 @@ public class ViewPagerAdapter extends PagerAdapter {
             R.string.desc_one,
             R.string.desc_two,
             R.string.desc_three,
-            R.string.desc_fourth
+            R.string.desc_fourth,
+            R.string.desc_one
     };
 
     public ViewPagerAdapter(Context context){
