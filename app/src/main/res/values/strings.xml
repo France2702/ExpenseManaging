@@ -26,6 +26,9 @@
     <string name="desc_three">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="desc_fourth">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</string>
     <string name="TODO">TODO</string>
+    <string name="Mnemonic">Ghi chú</string>
+    <string name="MoneySpent">Tiền chi là</string>
+    <string name="ChooseEvent">Chọn sự kiện</string>
 
     <string-array name="expense_option">
         <item>Đồ ăn</item>
