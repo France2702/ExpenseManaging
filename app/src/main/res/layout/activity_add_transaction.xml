@@ -190,7 +190,7 @@
                     android:layout_height="@dimen/spacing_middle" />
 
                 <Button
-                    android:id="@+id/button4"
+                    android:id="@+id/btn_save"
                     android:layout_width="match_parent"
                     android:layout_height="45dp"
                     android:layout_marginStart="280dp"

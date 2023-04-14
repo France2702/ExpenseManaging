@@ -45,8 +45,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="408dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="348dp"
         android:text="@string/LogIn"
         android:textSize="25sp"
         android:textStyle="bold"
@@ -74,7 +74,7 @@
         tools:ignore="VisualLintTextFieldSize" />
 
     <ImageButton
-        android:id="@+id/imageView2"
+        android:id="@+id/btn_log_in"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"

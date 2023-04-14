@@ -18,13 +18,16 @@
             android:theme="@style/Theme.ExpenseManaging.NoActionBar" />
         <activity
             android:name=".LogInActivity"
-            android:exported="false"
+            android:exported="true"
             android:theme="@style/Theme.ExpenseManaging.NoActionBar" />
 
         <activity
             android:name=".AddActive"
             android:exported="false" />
-        <activity android:name=".MainscreenActivity" />
+        <activity
+            android:name=".MainscreenActivity"
+            android:exported="true"
+            android:theme="@style/Theme.ExpenseManaging.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
