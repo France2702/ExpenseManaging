@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#4CAF50"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:contentInsetStartWithNavigation="0dp"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="@dimen/spacing_large"
+        android:scrollbars="none"
+        android:scrollingCache="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/grey_40">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="Chọn nhóm"
+                        android:textColor="@android:color/black"
+                        android:background="@color/white"/>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:textColorHint="@color/grey_40">
+
+                    <Spinner
+                        android:id="@+id/expense_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_area_dark_yellow"
+                android:padding="@dimen/spacing_large"
+                android:textColorHint="@color/grey_40">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="top"
+                    android:hint="@string/Mnemonic"
+                    android:inputType="textMultiLine"
+                    android:maxLines="12"
+                    android:minLines="7"
+                    android:textColor="@android:color/black"
+                    android:background="@color/white"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/grey_40">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/ChooseEvent"
+                    android:inputType="textLongMessage"
+                    android:textColor="@android:color/black"
+                    android:background="@color/white" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/MoneySpent"
+                    android:inputType="numberDecimal"
+                    android:textColor="@android:color/black"
+                    android:background="@color/white" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/view9"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/spacing_middle" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textColorHint="@color/grey_40">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:layout_width="197dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Thời gian là"
+                        android:inputType="date"
+                        android:textColor="@android:color/black"
+                        android:theme="@style/EditText.Yellow" />
+
+                    <View
+                        android:id="@+id/view11"
+                        android:layout_width="217dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="match_parent"
+                        android:layout_height="46dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/btn_rounded_accent"
+                        android:text="Chọn ngày"
+                        android:theme="@style/DatePickerThemeLight" />
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_middle" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="76dp"
+                android:textColorHint="@color/grey_40">
+
+                <View
+                    android:id="@+id/view7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spacing_middle" />
+
+                <Button
+                    android:id="@+id/btn_save"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="280dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="#3A8546"
+                    android:text="Lưu" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

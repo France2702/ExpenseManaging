@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey_10"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/green_900"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageButton
+                    android:id="@+id/bt_menu"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/TODO"
+                    app:srcCompat="@drawable/ic_menu"
+                    app:tint="@android:color/white" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/bt_search"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="@string/TODO"
+                    app:srcCompat="@drawable/ic_search"
+                    app:tint="@android:color/white" />
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="250dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="@dimen/spacing_mlarge"
+                        android:layout_marginRight="@dimen/spacing_mlarge"
+                        android:src="@drawable/shape_circle"
+                        app:tint="#cccccc" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="70dp"
+                            android:layout_height="@dimen/spacing_middle"
+                            android:background="#cccccc" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="#cccccc" />
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="#cccccc" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/spacing_xlarge"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginEnd="@dimen/spacing_mlarge"
+                        android:layout_marginRight="@dimen/spacing_xlarge"
+                        android:src="@drawable/shape_circle"
+                        app:tint="#cccccc" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <View
+                            android:layout_width="100dp"
+                            android:layout_height="@dimen/spacing_middle"
+                            android:background="#cccccc" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="#cccccc" />
+
+                        <View
+                            android:layout_width="40dp"
+                            android:layout_height="@dimen/spacing_middle"
+                            android:layout_marginTop="@dimen/spacing_middle"
+                            android:background="#cccccc" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/menu_nav_1"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/TODO"
+                android:focusable="true"
+                android:padding="@dimen/spacing_smlarge"
+                app:srcCompat="@drawable/mainscreen_btn_home"
+                app:tint="#43A047" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btn_add_transaction"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:contentDescription="@string/TODO"
+                android:focusable="true"
+                android:tint="@android:color/white"
+                app:backgroundTint="#43A047"
+                app:elevation="2dp"
+                app:fabSize="mini"
+                app:rippleColor="@android:color/white"
+                app:srcCompat="@drawable/mainscreen_ic_add_transaction" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/menu_nav_5"
+                android:layout_width="?attr/actionBarSize"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/TODO"
+                android:focusable="true"
+                android:padding="@dimen/spacing_smlarge"
+                app:srcCompat="@drawable/mainscreen_report"
+                app:tint="#43A047" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</LinearLayout>
