@@ -12,11 +12,6 @@
         android:theme="@style/Theme.ExpenseManaging"
         tools:targetApi="31">
         <activity
-            android:name=".Phap_is_testing"
-            android:exported="false"
-            android:label="@string/title_activity_phap_is_testing"
-            android:theme="@style/Theme.ExpenseManaging.NoActionBar" />
-        <activity
             android:name=".LogInActivity"
             android:exported="true"
             android:theme="@style/Theme.ExpenseManaging.NoActionBar" />
