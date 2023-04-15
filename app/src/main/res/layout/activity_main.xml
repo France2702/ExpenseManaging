@@ -58,8 +58,8 @@
         android:id="@+id/btn_add_user"
         android:layout_width="350dp"
         android:layout_height="60dp"
-        android:text="Tạo người dùng"
         android:fontFamily="@font/poppins_regular"
+        android:text="Tạo người dùng"
         app:layout_constraintBottom_toBottomOf="@+id/slideViewPager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />

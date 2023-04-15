@@ -149,23 +149,20 @@
                     android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatEditText
-                        android:layout_width="197dp"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:hint="Thời gian là"
                         android:inputType="date"
                         android:textColor="@android:color/black"
-                        android:theme="@style/EditText.Yellow" />
+                        android:theme="@style/EditText.Yellow"
+                        android:layout_weight="1"/>
 
-                    <View
-                        android:id="@+id/view11"
-                        android:layout_width="217dp"
-                        android:layout_height="44dp"
-                        android:layout_weight="1" />
+
 
                     <Button
                         android:id="@+id/button5"
                         android:layout_width="match_parent"
-                        android:layout_height="46dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:background="@drawable/btn_rounded_accent"
                         android:text="Chọn ngày"
@@ -181,7 +178,7 @@
 
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="76dp"
+                android:layout_height="wrap_content"
                 android:textColorHint="@color/grey_40">
 
                 <View
@@ -192,8 +189,9 @@
                 <Button
                     android:id="@+id/btn_save"
                     android:layout_width="match_parent"
-                    android:layout_height="45dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="280dp"
+                    android:layout_marginEnd="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_weight="1"
                     android:backgroundTint="#3A8546"

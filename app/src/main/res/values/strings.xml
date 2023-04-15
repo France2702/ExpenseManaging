@@ -26,7 +26,7 @@
     <string name="desc_two">Giúp bạn lập kế hoạch và đặt ngân sách cho các danh mục chi tiêu khác nhau và cung cấp cảnh báo và thông báo khi vượt quá ngân sách</string>
     <string name="desc_three">Cho phép bạn đặt và theo dõi mục tiêu tiết kiệm và cung cấp phản hồi trực quan về tiến độ đạt được mục tiêu đó</string>
     <string name="desc_fourth">Đảm bảo rằng dữ liệu của bạn được bảo vệ bằng cách triển khai các giao thức xác thực và mã hóa an toàn và cung cấp tùy chọn cho cài đặt bảo mật và riêng tư</string>
-    <string name="déc_fifth">Cung cấp cho bạn báo cáo chi tiêu chi tiết và phân tích thói quen chi tiêu , giúp xác định các lĩnh vực mà bạn có thể tiết kiệm tiền và đưa ra quyết định tài chính thông minh hơn</string>
+    <string name="desc_fifth">Cung cấp cho bạn báo cáo chi tiêu chi tiết và phân tích thói quen chi tiêu , giúp xác định các lĩnh vực mà bạn có thể tiết kiệm</string>
     <string name="TODO">TODO</string>
     <string name="Mnemonic">Ghi chú</string>
     <string name="MoneySpent">Tiền chi là</string>
